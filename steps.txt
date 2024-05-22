@@ -1,3 +1,5 @@
+Criando e rodando um container
+
 1- $ git clone https://github.com/remingtonsb/pythonapp.git
 2- $ cd pythonapp
 3- $ podman build -t pythonapp .
@@ -5,3 +7,13 @@
 5- $ podman run -d -p 8080:8080 pythonapp
 6- $ podman ps
 7- $ curl localhost:8080
+
+Deletando um container e suas imagens
+
+1- podman rm $(podman ps -a -q)
+2- podman rmi $(podman images -q)
+
+
+
+
+
